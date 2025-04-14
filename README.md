@@ -29,19 +29,21 @@ This repository is designed for researchers and practitioners aiming to benchmar
 
 ## 🗂 Repository Structure
 
-| Folder Name                           | Description                                           |
-|--------------------------------------|-------------------------------------------------------|
-| `SOTA_angle_DNN/`                    | DNN-based angle estimation module.                   |
-| `SOTA_angle_deepmusic/`              | DeepMusic-based angle estimation module.             |
-| `SOTA_distance_DNN/`                 | Distance estimation using DNN.                       |
-| `SOTA_distance_FFT/`                 | Classical FFT-based distance estimation.             |
-| `stratifv2_GTnew_3persons/`         | Tests involving 3 persons simultaneously.            |
-| `stratifv2_GTnew_Both_Labs/`        | Data combining experiments from both labs.           |
-| `stratifv2_GTnew_test_LAB1/`        | Experiments conducted in Lab 1.                      |
-| `stratifv2_GTnew_test_LAB2/`        | Experiments conducted in Lab 2.                      |
-| `stratifv2_GTnew_test_ALL/`         | All testing scenarios combined.                      |
-| `stratifv2_GTnew_test_Person1-3/`   | Individual person-based testing.                     |
-| `stratifv2_GTnew_Tests_others/`     | Other testing configurations and edge cases.         |
+| Folder Name                           | Description                                                 |
+|--------------------------------------|------------------------------------------------------------- |
+| `SOTA_angle_DNN/`                   | DNN-based angle estimation module for SOTA comparison         |
+| `SOTA_angle_deepmusic/`             | DeepMusic-based angle estimation module for SOTA comparison   |
+| `SOTA_distance_DNN/`                | Distance estimation using DNN for SOTA comparison             |
+| `SOTA_distance_FFT/`                | Classical FFT-based distance estimation for SOTA comparison   |
+| `stratifv2_GTnew_3persons/`         | Tests involving 3 persons simultaneously.                     |
+| `stratifv2_GTnew_Both_Labs/`        | Data combining experiments from both labs.                    |
+| `stratifv2_GTnew_test_LAB1/`        | Experiments trained with data in LAB 2 and Tested on LAB1.    |
+| `stratifv2_GTnew_test_LAB2/`        | Experiments  trained with data in LAB 1 and Tested on LAB1.   |
+| `stratifv2_GTnew_test_ALL/`         | All testing scenarios combined (person1 and 2 persons cases). |
+| `stratifv2_GTnew_test_Person1/`     | Individual person-based testing.                              |
+| `stratifv2_GTnew_test_Person13/`    | Individual person-based testing.                              |
+| `stratifv2_GTnew_test_Person13/`    | Individual person-based testing.                              |
+| `stratifv2_GTnew_Tests_others/`     | Other testing configurations and edge cases.                  |
 
 ---
 
@@ -67,9 +69,9 @@ This repository is designed for researchers and practitioners aiming to benchmar
 
 > 💾 Download all pre-trained models from:
 
-[![Google Drive Models](https://img.shields.io/badge/Download-Models-red)](https://drive.google.com/drive/folders/YOUR_MODEL_LINK_HERE)
+[[![Google Drive Models](https://img.shields.io/badge/Download-Models-red)](https://drive.google.com/drive/folders/YOUR_MODEL_LINK_HERE)](https://drive.google.com/drive/folders/1T1FwFO5CJGH0goVboAhtcyvKd4ZJi9cc?usp=sharing)
 
-These models are provided for reproducibility, benchmarking, and quick evaluation on your data.
+These models are provided for reproducibility, benchmarking, and quick evaluation on your data. You will find a document that describe every model for each experience, also the models used for SOTA comparison.
 
 ---
 
@@ -84,5 +86,5 @@ cd FMCW_radar_localization_code
 pip install -r requirements.txt
 
 # Run any model
-cd SOTA_angle_DNN
-python main.py
+cd stratifyv2_GTnew_test_ALL
+python testPolarv2.py
